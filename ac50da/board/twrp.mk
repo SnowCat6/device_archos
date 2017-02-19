@@ -17,7 +17,7 @@
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-#TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_SUPERSU := true
 TW_INPUT_BLACKLIST := "lis3dh-accel\x0ahbtp_vm"
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/twrp.fstab
