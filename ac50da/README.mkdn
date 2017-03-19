@@ -3,14 +3,14 @@ Device Tree for Archos 50 Diamond (1080p)
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Quad-core 1.7 GHz Cortex-A53 & quad-core 1.0 GHz Cortex-A53
+CPU     | Quad-core 1.5 GHz Cortex-A53 & quad-core 1.0 GHz Cortex-A53
 Chipset | Qualcomm MSM8939 Snapdragon 615
 GPU     | Adreno 405
 Memory  | 2GB RAM
 Shipped Android Version | 5.0.2
 Storage | 16 GB
 MicroSD | Up to 128 GB
-Battery | Li-Po 2500mAh battery
-Display | 1080 x 1920 pixels, 5.0 inches (~401 ppi pixel density)
-Camera  | 13 MP, laser autofocus, dual-LED (dual tone) flash
-
+Battery | Li-Po 2700mAh battery
+Display | 1080 x 1920 pixels, 5.0 inches (~440 ppi pixel density)
+Camera  | 16 MP, laser autofocus, LED flash
+        | 8MP
