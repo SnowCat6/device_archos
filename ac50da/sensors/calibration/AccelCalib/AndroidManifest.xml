@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014 The CyanogenMod Project
+     Copyright (C) 2016 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cyngn.cracklingacc"
+    package="com.cyngn.paellaacc"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
@@ -27,8 +27,13 @@
        <receiver android:name=".HintReceiver">
             <intent-filter>
                  <action android:name="android.provider.Telephony.SECRET_CODE" />
+                 <data android:scheme="android_secret_code" android:host="99" />
+            </intent-filter>
+            <intent-filter>
+                 <action android:name="android.provider.Telephony.SECRET_CODE" />
                  <data android:scheme="android_secret_code" android:host="22235" />
             </intent-filter>
+
        </receiver>
 
     </application>
