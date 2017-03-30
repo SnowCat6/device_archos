@@ -23,7 +23,8 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
-	persist.sys.usb.config=adb
+	persist.sys.usb.config=adb \
+	qemu.hw.mainkeys=0
 
 PRODUCT_NAME := lineage_ac50da
 BOARD_VENDOR := archos
@@ -40,5 +41,5 @@ TARGET_VENDOR_PRODUCT_NAME := qcac50da
 TARGET_VENDOR_DEVICE_NAME := qcac50da
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ac50da
+TARGET_OTA_ASSERT_DEVICE := ac50da,qcac50da
 
