@@ -13,18 +13,19 @@
 # limitations under the License.
 
 #FORCE_32_BIT := true
+# Must define platform variant before including any common things
+
 $(call inherit-product, device/archos/ac50da/full_ac50da.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
-TARGET_BOARD_PLATFORM_VARIANT := msm8916
+TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
-	persist.sys.usb.config=adb \
-	qemu.hw.mainkeys=0
+	persist.sys.usb.config=adb
 
 PRODUCT_NAME := lineage_ac50da
 BOARD_VENDOR := archos
