@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera \
     mm-qcamera-daemon \
+    cpp_firmware_v1_1_1.fw_32 cpp_firmware_v1_1_6.fw_32 cpp_firmware_v1_2_0.fw_32 cpp_firmware_v1_4_0.fw_32 \
     Snap
 
 # Permissions
