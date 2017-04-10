@@ -1525,7 +1525,7 @@ uint8_t get_num_of_cameras()
         uint32_t num_entities = 1U;
         char dev_name[32];
 
-       CDBG("SnowCat: /dev/media%d\n", num_media_devices);
+ //      CDBG("SnowCat: /dev/media%d\n", num_media_devices);
        snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_media_devices);
         dev_fd = open(dev_name, O_RDWR | O_NONBLOCK);
         if (dev_fd < 0) {
@@ -1541,7 +1541,7 @@ uint8_t get_num_of_cameras()
             break;
         }
 
-       CDBG("SnowCat: media name %s\n", mdev_info.model);
+      CDBG("SnowCat: media name %s\n", mdev_info.model);
        if (strncmp(mdev_info.model, "msm_config", sizeof(mdev_info.model) != 0)) {
             close(dev_fd);
             dev_fd = 0;
@@ -1597,7 +1597,7 @@ uint8_t get_num_of_cameras()
         char dev_name[32];
 
 	CDBG("SnowCat: num_entities %d\n", num_entities);
-       snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_entities);
+        snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_media_devices);
         dev_fd = open(dev_name, O_RDWR | O_NONBLOCK);
         if (dev_fd <= 0) {
             CDBG("Done discovering media devices\n");
