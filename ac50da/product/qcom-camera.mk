@@ -1,10 +1,16 @@
 # Camera
+
 PRODUCT_PACKAGES += \
+    Snap \
     camera.msm8916 \
     libmm-qcamera \
     mm-qcamera-daemon \
-    cpp_firmware_v1_1_1.fw_32 cpp_firmware_v1_1_6.fw_32 cpp_firmware_v1_2_0.fw_32 cpp_firmware_v1_4_0.fw_32 \
-    Snap
+    mm-qcamera-app \
+    libmmcamera2_sensor_modules_32 \
+    liboemcamera_32 \
+    libmmcamera_ov13850_32 libmmcamera_sunny_q13v04b_eeprom_32 \
+    libmmcamera_ov5670_q5v41b_32 libmmcamera_sunny_q5v41b_eeprom_32 \
+    cpp_firmware_v1_1_1.fw_32 cpp_firmware_v1_1_6.fw_32 cpp_firmware_v1_2_0.fw_32 cpp_firmware_v1_4_0.fw_32
 
 # Permissions
 PRODUCT_COPY_FILES += \
