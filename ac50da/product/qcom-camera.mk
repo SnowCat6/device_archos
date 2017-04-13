@@ -15,4 +15,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false \
     camera2.portability.force_api=1 \
-    media.stagefright.legacyencoder=true
+    media.stagefright.legacyencoder=true\
+    media.stagefright.less-secure=true
