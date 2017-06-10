@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=crackling
+DEVICE=kipper
 VENDOR=wileyfox
 
 # Load extractutils and do some sanity checks

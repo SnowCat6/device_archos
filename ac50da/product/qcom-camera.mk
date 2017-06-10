@@ -1,10 +1,8 @@
 # Camera
-
 PRODUCT_PACKAGES += \
-    Snap \
     camera.msm8916 \
-    libmm-qcamera
-
+    libmm-qcamera \
+    Snap
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -14,6 +12,4 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false \
-    camera2.portability.force_api=1 \
-    media.stagefright.legacyencoder=true\
-    media.stagefright.less-secure=true
+    persist.camera.hal.debug.mask=0

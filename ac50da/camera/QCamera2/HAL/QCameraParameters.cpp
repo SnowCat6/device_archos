@@ -660,7 +660,7 @@ const QCameraParameters::QCameraMap<int>
 
 const QCameraParameters::QCameraMap<int>
         QCameraParameters::DENOISE_ON_OFF_MODES_MAP[] = {
-    { DENOISE_OFF, 1 },
+    { DENOISE_OFF, 0 },
     { DENOISE_ON,  1 }
 };
 
@@ -1564,6 +1564,22 @@ int32_t QCameraParameters::setLiveSnapshotSize(const QCameraParameters& params)
             }
         }
     }
+
+    // QCamera is guaranteed to support liveshot at video resolution, even
+    // though it may not appear in the livesnapshot_sizes_tbl.  In L, if the
+    // user sets a picture size larger than the supported liveshot resolution,
+    // the resulting liveshot MUST be at least as large as the video
+    // resolution (android.hardware.cts.CameraTest#testVideoSnapshot).
+    int videoWidth = 0, videoHeight = 0;
+    int pictureWidth = 0, pictureHeight = 0;
+    params.getVideoSize(&videoWidth, &videoHeight);
+    params.getPictureSize(&pictureWidth, &pictureHeight);
+    if ((pictureWidth > m_LiveSnapshotSize.width && m_LiveSnapshotSize.width < videoWidth) ||
+        (pictureHeight > m_LiveSnapshotSize.height && m_LiveSnapshotSize.height < videoHeight)) {
+        m_LiveSnapshotSize.width = videoWidth;
+        m_LiveSnapshotSize.height = videoHeight;
+    }
+
     CDBG("%s: live snapshot size %d x %d", __func__,
           m_LiveSnapshotSize.width, m_LiveSnapshotSize.height);
 
@@ -4734,7 +4750,7 @@ int32_t QCameraParameters::initDefaultParameters()
             ANTIBANDING_MODES_MAP,
             PARAM_MAP_SIZE(ANTIBANDING_MODES_MAP));
     set(KEY_SUPPORTED_ANTIBANDING, antibandingValues);
-    setAntibanding(ANTIBANDING_AUTO);
+    setAntibanding(ANTIBANDING_OFF);
 
     // Set Effect
     String8 effectValues = createValuesString(
@@ -6752,7 +6768,7 @@ int QCameraParameters::getAutoFlickerMode()
       Currently setting it to default    */
     char prop[PROPERTY_VALUE_MAX];
     memset(prop, 0, sizeof(prop));
-    property_get("persist.camera.set.afd", prop, "4");
+    property_get("persist.camera.set.afd", prop, "3");
     return atoi(prop);
 }
 

@@ -1,4 +1,3 @@
-# Latest hardware revision supported
+# Hardware revision
 ro.product.model.platform=1
 qemu.hw.mainkeys=1
-

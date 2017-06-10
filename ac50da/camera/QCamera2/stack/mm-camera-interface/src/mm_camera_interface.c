@@ -1501,7 +1501,7 @@ uint8_t get_num_of_cameras()
                         0x1 for HAL
                         0x10 for mm-camera-interface
                         0x100 for mm-jpeg-interface  */
-    property_get("persist.camera.hal.debug.mask", prop, "805306375"); // 0x30000007=268435463
+    property_get("persist.camera.hal.debug.mask", prop, "268435463"); // 0x10000007=268435463
     temp = (uint32_t) atoi(prop);
     log_level = ((temp >> 28) & 0xF);
     debug_mask = (temp & HAL_DEBUG_MASK_MM_CAMERA_INTERFACE);
@@ -1525,8 +1525,7 @@ uint8_t get_num_of_cameras()
         uint32_t num_entities = 1U;
         char dev_name[32];
 
- //      CDBG("SnowCat: /dev/media%d\n", num_media_devices);
-       snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_media_devices);
+        snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_media_devices);
         dev_fd = open(dev_name, O_RDWR | O_NONBLOCK);
         if (dev_fd < 0) {
             CDBG("Done discovering media devices\n");
@@ -1541,8 +1540,7 @@ uint8_t get_num_of_cameras()
             break;
         }
 
-      CDBG("SnowCat: media name %s\n", mdev_info.model);
-       if (strncmp(mdev_info.model, "msm_config", sizeof(mdev_info.model) != 0)) {
+        if (strncmp(mdev_info.model, "msm_config", sizeof(mdev_info.model) != 0)) {
             close(dev_fd);
             dev_fd = 0;
             continue;
@@ -1551,7 +1549,6 @@ uint8_t get_num_of_cameras()
         while (1) {
             struct media_entity_desc entity;
             memset(&entity, 0, sizeof(entity));
-	    CDBG("SnowCat: media entry id %d\n", num_entities);
             entity.id = num_entities++;
             CDBG_ERROR("entity id %d", entity.id);
             rc = ioctl(dev_fd, MEDIA_IOC_ENUM_ENTITIES, &entity);
@@ -1560,7 +1557,6 @@ uint8_t get_num_of_cameras()
                 rc = 0;
                 break;
             }
-	    CDBG("SnowCat: media name %s\n", entity.name);
             CDBG_ERROR("entity name %s type %d group id %d",
                 entity.name, entity.type, entity.group_id);
             if (entity.type == MEDIA_ENT_T_V4L2_SUBDEV &&
@@ -1574,14 +1570,12 @@ uint8_t get_num_of_cameras()
     }
 
     /* Open sensor_init subdev */
-    CDBG("SnowCat: Open sensor_init subdev %s\n", subdev_name);
     sd_fd = open(subdev_name, O_RDWR);
     if (sd_fd < 0) {
         CDBG_ERROR("Open sensor_init subdev failed");
         return FALSE;
     }
 
-    CDBG("SnowCat: CFG_SINIT_PROBE_WAIT_DONE\n");
     cfg.cfgtype = CFG_SINIT_PROBE_WAIT_DONE;
     cfg.cfg.setting = NULL;
     if (ioctl(sd_fd, VIDIOC_MSM_SENSOR_INIT_CFG, &cfg) < 0) {
@@ -1596,14 +1590,12 @@ uint8_t get_num_of_cameras()
         uint32_t num_entities = 1U;
         char dev_name[32];
 
-	CDBG("SnowCat: num_entities %d\n", num_entities);
         snprintf(dev_name, sizeof(dev_name), "/dev/media%d", num_media_devices);
         dev_fd = open(dev_name, O_RDWR | O_NONBLOCK);
         if (dev_fd <= 0) {
             CDBG("Done discovering media devices\n");
             break;
         }
-	CDBG("SnowCat: MEDIA_IOC_DEVICE_INFO num_media_devices %d\n", num_media_devices);
         num_media_devices++;
         memset(&mdev_info, 0, sizeof(mdev_info));
         rc = ioctl(dev_fd, MEDIA_IOC_DEVICE_INFO, &mdev_info);
@@ -1615,7 +1607,6 @@ uint8_t get_num_of_cameras()
             break;
         }
 
-	CDBG("SnowCat: MSM_CAMERA_NAME %s\n", mdev_info.model);
         if(strncmp(mdev_info.model, MSM_CAMERA_NAME, sizeof(mdev_info.model)) != 0) {
             close(dev_fd);
             dev_fd = 0;
@@ -1625,7 +1616,6 @@ uint8_t get_num_of_cameras()
         while (1) {
             struct media_entity_desc entity;
             memset(&entity, 0, sizeof(entity));
-	    CDBG("SnowCat: MEDIA_IOC_ENUM_ENTITIES num_media_devices %d\n", num_entities);
             entity.id = num_entities++;
             rc = ioctl(dev_fd, MEDIA_IOC_ENUM_ENTITIES, &entity);
             if (rc < 0) {
@@ -1633,7 +1623,6 @@ uint8_t get_num_of_cameras()
                 rc = 0;
                 break;
             }
-	    CDBG("SnowCat: MEDIA_ENT_T_DEVNODE_V4L id %d\n", entity.group_id);
             if(entity.type == MEDIA_ENT_T_DEVNODE_V4L && entity.group_id == QCAMERA_VNODE_GROUP_ID) {
                 strlcpy(g_cam_ctrl.video_dev_name[num_cameras],
                      entity.name, sizeof(entity.name));

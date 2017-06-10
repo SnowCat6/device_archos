@@ -14,7 +14,7 @@
 
 #FORCE_32_BIT := true
 WITH_SU := true
-RECOVERY_VARIANT := twrp
+#RECOVERY_VARIANT := twrp
 # Must define platform variant before including any common things
 
 $(call inherit-product, device/archos/ac50da/full_ac50da.mk)

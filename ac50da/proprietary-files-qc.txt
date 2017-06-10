@@ -58,48 +58,46 @@ vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegenc.so
 
 # Camera actuator
-vendor/lib/libactuator_AK7345_camcorder.so
-vendor/lib/libactuator_AK7345_camera.so
-vendor/lib/libactuator_dw9718s_olqba20.so
-vendor/lib/libactuator_dw9718s_olqba20_camcorder.so
-vendor/lib/libactuator_dw9718s_olqba20_camera.so
+vendor/lib/libactuator_bu64297_q13v06k.so
+vendor/lib/libactuator_bu64297_q13v06k_camcorder.so
+vendor/lib/libactuator_bu64297_q13v06k_camera.so
+vendor/lib/libactuator_rohm_bu64243gwz_spirit.so
+vendor/lib/libactuator_rohm_bu64243gwz_spirit_camcorder.so
+vendor/lib/libactuator_rohm_bu64243gwz_spirit_camera.so
 
 # Camera chromatix
-vendor/lib/libchromatix_hi545_8916_common.so
-vendor/lib/libchromatix_hi545_8916_hfr_120fps.so
-vendor/lib/libchromatix_hi545_8916_hfr_60fps.so
-vendor/lib/libchromatix_hi545_8916_hfr_90fps.so
-vendor/lib/libchromatix_hi545_8916_liveshot.so
-vendor/lib/libchromatix_hi545_8916_preview.so
-vendor/lib/libchromatix_hi545_8916_snapshot.so
-vendor/lib/libchromatix_hi545_8916_default_video.so
-vendor/lib/libchromatix_hi545_8916_video_hd.so
-vendor/lib/libchromatix_imx214_8916_common.so
-vendor/lib/libchromatix_imx214_8916_hfr_120fps.so
-vendor/lib/libchromatix_imx214_8916_hfr_60fps.so
-vendor/lib/libchromatix_imx214_8916_hfr_90fps.so
-vendor/lib/libchromatix_imx214_8916_liveshot.so
-vendor/lib/libchromatix_imx214_8916_preview.so
-vendor/lib/libchromatix_imx214_8916_snapshot.so
-vendor/lib/libchromatix_imx214_8916_default_video.so
-vendor/lib/libchromatix_imx214_8916_video_hd.so
-vendor/lib/libchromatix_s5k3m2_olqba20_common.so
-vendor/lib/libchromatix_s5k3m2_olqba20_hfr_120fps.so
-vendor/lib/libchromatix_s5k3m2_olqba20_hfr_60fps.so
-vendor/lib/libchromatix_s5k3m2_olqba20_hfr_90fps.so
-vendor/lib/libchromatix_s5k3m2_olqba20_preview.so
-vendor/lib/libchromatix_s5k3m2_olqba20_snapshot.so
-vendor/lib/libchromatix_s5k3m2_olqba20_default_video.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_common.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_liveshot.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_preview.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_snapshot.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_video.so
-vendor/lib/libchromatix_s5k5e2_olq5f19_video_hd.so
+vendor/lib/libchromatix_imx220_common.so
+vendor/lib/libchromatix_imx220_default_video.so
+vendor/lib/libchromatix_imx220_hfr_120fps.so
+vendor/lib/libchromatix_imx220_hfr_60fps.so
+vendor/lib/libchromatix_imx220_hfr_90fps.so
+vendor/lib/libchromatix_imx220_liveshot.so
+vendor/lib/libchromatix_imx220_preview.so
+vendor/lib/libchromatix_imx220_snapshot.so
+vendor/lib/libchromatix_imx220_zsl.so
+vendor/lib/libchromatix_imx230_common.so
+vendor/lib/libchromatix_imx230_default_video.so
+vendor/lib/libchromatix_imx230_hfr_120fps.so
+vendor/lib/libchromatix_imx230_hfr_60fps.so
+vendor/lib/libchromatix_imx230_hfr_90fps.so
+vendor/lib/libchromatix_imx230_liveshot.so
+vendor/lib/libchromatix_imx230_preview.so
+vendor/lib/libchromatix_imx230_snapshot.so
+vendor/lib/libchromatix_imx230_zsl.so
+vendor/lib/libchromatix_ov8858_q8v19w_common.so
+vendor/lib/libchromatix_ov8858_q8v19w_default_video.so
+vendor/lib/libchromatix_ov8858_q8v19w_hfr_120fps.so
+vendor/lib/libchromatix_ov8858_q8v19w_hfr_60fps.so
+vendor/lib/libchromatix_ov8858_q8v19w_hfr_90fps.so
+vendor/lib/libchromatix_ov8858_q8v19w_liveshot.so
+vendor/lib/libchromatix_ov8858_q8v19w_preview.so
+vendor/lib/libchromatix_ov8858_q8v19w_snapshot.so
+vendor/lib/libchromatix_ov8858_q8v19w_video_nonHD.so
+vendor/lib/libchromatix_ov8858_q8v19w_zsl.so
 
 # Camera eeprom
-vendor/lib/libmmcamera_s5k3m2_olqba20_eeprom.so
-vendor/lib/libmmcamera_s5k5e2_olq5f19_eeprom.so
+vendor/lib/libmmcamera_qtech_ov8858_eeprom.so
+vendor/lib/libmmcamera_sonyimx220_eeprom.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
@@ -108,10 +106,9 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 
 # Camera sensors
-vendor/lib/libmmcamera_hi545_8916.so
-vendor/lib/libmmcamera_imx214_8916.so
-vendor/lib/libmmcamera_s5k3m2_olqba20.so
-vendor/lib/libmmcamera_s5k5e2_olq5f19.so
+vendor/lib/libmmcamera_imx220.so
+vendor/lib/libmmcamera_imx230.so
+vendor/lib/libmmcamera_ov8858_q8v19w_spirit.so
 
 # DRM
 bin/qseecomd
@@ -201,20 +198,18 @@ vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
 # Graphics firmware
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
 
 # Media
-lib/libOmxVdecHevc.so
-vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
-vendor/lib/libmmosal.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
 # Perf
+bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-perfd-client.so
@@ -224,11 +219,9 @@ bin/mm-pp-daemon
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libmm-abl.so
 vendor/lib64/libmm-abl-oem.so
+vendor/lib64/libmm-als.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
-
-# Power
-bin/vm_bms
 
 # Qualcomm framework
 bin/irsc_util
@@ -271,10 +264,8 @@ bin/netmgrd
 bin/qmuxd
 bin/radish
 bin/rmt_storage
-etc/permissions/com.qrd.wappush.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
--framework/com.qrd.wappush.jar
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -290,6 +281,9 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 vendor/lib/libmdmdetect.so
+
+# Serial
+-bin/cktnvtool
 
 # Thermal
 vendor/bin/thermal-engine

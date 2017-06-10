@@ -20,7 +20,7 @@ set -e
 export INITIAL_COPYRIGHT_YEAR=2015
 
 # Required!
-DEVICE=crackling
+DEVICE=kipper
 VENDOR=wileyfox
 
 # Load extractutils and do some sanity checks
