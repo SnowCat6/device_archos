@@ -1,3 +1,4 @@
 # NFC
 #TARGET_USES_NQ_NFC := true
-#TARGET_USES_QCA_NFC := true
+#BOARD_HAVE_QCOM_NFC := true
+
