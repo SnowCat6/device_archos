@@ -41,8 +41,7 @@
 #define MAX_METADATA_PAYLOAD_SIZE    (1024)
 #define AWB_DEBUG_DATA_SIZE          (7027)
 #define AEC_DEBUG_DATA_SIZE          (1720)
-#define AF_DEBUG_DATA_SIZE           (1000)
-//(643)
+#define AF_DEBUG_DATA_SIZE           (50000)
 #define ASD_DEBUG_DATA_SIZE          (100)
 #define STATS_BUFFER_DEBUG_DATA_SIZE (74756)
 
