@@ -20,8 +20,8 @@ set -e
 export INITIAL_COPYRIGHT_YEAR=2015
 
 # Required!
-DEVICE=kipper
-VENDOR=wileyfox
+DEVICE=ac50da
+VENDOR=archos
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
