@@ -20,14 +20,16 @@ RECOVERY_VARIANT := twrp
 $(call inherit-product, device/archos/ac50da/full_ac50da.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-	ro.adb.secure=0 \
-	persist.sys.usb.config=adb
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#	ro.adb.secure=0 \
+#	persist.sys.usb.config=adb
 
 PRODUCT_NAME := lineage_ac50da
 BOARD_VENDOR := archos

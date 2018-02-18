@@ -20,4 +20,4 @@ include device/archos/ac50da/board/*.mk
 TARGET_BOARD_INFO_FILE := device/archos/ac50da/board-info.txt
 
 # inherit from the proprietary version
--include vendor/archos/ac50da/BoardConfigVendor.mk
+include vendor/archos/ac50da/BoardConfigVendor.mk

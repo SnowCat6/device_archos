@@ -23,4 +23,5 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
+# Call the proprietary setup
 $(call inherit-product-if-exists, vendor/archos/ac50da/ac50da-vendor.mk)

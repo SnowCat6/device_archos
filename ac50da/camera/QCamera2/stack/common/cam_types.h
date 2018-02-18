@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2015, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -41,7 +41,7 @@
 #define MAX_METADATA_PAYLOAD_SIZE    (1024)
 #define AWB_DEBUG_DATA_SIZE          (7027)
 #define AEC_DEBUG_DATA_SIZE          (1720)
-#define AF_DEBUG_DATA_SIZE           (50000)
+#define AF_DEBUG_DATA_SIZE           (643)
 #define ASD_DEBUG_DATA_SIZE          (100)
 #define STATS_BUFFER_DEBUG_DATA_SIZE (74756)
 
@@ -260,6 +260,11 @@ typedef enum {
     CAM_FORMAT_BAYER_IDEAL_RAW_PLAIN16_14BPP_GRBG,
     CAM_FORMAT_BAYER_IDEAL_RAW_PLAIN16_14BPP_RGGB,
     CAM_FORMAT_BAYER_IDEAL_RAW_PLAIN16_14BPP_BGGR,
+
+    /* UBWC format */
+    CAM_FORMAT_YUV_420_NV12_UBWC,
+
+    CAM_FORMAT_YUV_420_NV21_VENUS,
 
     CAM_FORMAT_MAX
 } cam_format_t;
@@ -624,6 +629,7 @@ typedef struct  {
 typedef enum {
     CAM_STREAMING_MODE_CONTINUOUS, /* continous streaming */
     CAM_STREAMING_MODE_BURST,      /* burst streaming */
+    CAM_STREAMING_MODE_BATCH,      /* stream frames in batches */
     CAM_STREAMING_MODE_MAX
 } cam_streaming_mode_t;
 
